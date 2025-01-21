@@ -2,6 +2,10 @@
 
 Space Pixels is a Shoot'Em Up game developed in C. The code available in this directory corresponds to the basecode of the mid-year project for the first year at ESIEA in 2024-2025.
 
+## Demo
+
+The project in this repository corresponds to basecode only. A demonstration of what can be done is available in the demo folder. The executable is compiled to run under Windows.
+
 ## Building
 
 ### Building for Visual Studio (Windows)
@@ -45,4 +49,4 @@ cmake --build .
 
 All code produced for this project is licensed under the [MIT license](/LICENSE.md). It uses the [SDL2](https://github.com/libsdl-org/SDL), [SDL2_image](https://github.com/libsdl-org/SDL_image), [SDL2_mixer](https://github.com/libsdl-org/SDL_mixer) and [SDL2_ttf](https://github.com/libsdl-org/SDL_ttf) libraries.
 
-Licenses for game assets are available in the assets folder.
+Licenses for game assets are available in the assets folder ([licenses](/assets/LICENSE.md)).
