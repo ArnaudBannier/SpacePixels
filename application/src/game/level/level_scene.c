@@ -169,9 +169,9 @@ void LevelScene_updateEngine(LevelScene *self)
         int playerID = bullet->m_playerID;
         if (playerID >= 0)
         {
-            for (int i = 0; i < ENEMY_CAPACITY; i++)
+            for (int j = 0; j < ENEMY_CAPACITY; j++)
             {
-                Enemy *enemy = self->m_enemies[i];
+                Enemy *enemy = self->m_enemies[j];
                 if (enemy == NULL) continue;
 
                 float dist = Vec2_distanceSquared(bullet->m_position, enemy->m_position);
@@ -187,9 +187,9 @@ void LevelScene_updateEngine(LevelScene *self)
         }
         else
         {
-            for (int i = 0; i < self->m_playerCount; i++)
+            for (int j = 0; j < self->m_playerCount; j++)
             {
-                Player *player = self->m_players[i];
+                Player *player = self->m_players[j];
                 if (player->m_state == PLAYER_STATE_DEAD) continue;
 
                 float dist = Vec2_distanceSquared(bullet->m_position, player->m_position);
@@ -221,9 +221,9 @@ void LevelScene_updateEngine(LevelScene *self)
 
         Item_update(item);
 
-        for (int i = 0; i < self->m_playerCount; i++)
+        for (int j = 0; j < self->m_playerCount; j++)
         {
-            Player *player = self->m_players[i];
+            Player *player = self->m_players[j];
             if (player->m_state == PLAYER_STATE_DEAD) continue;
 
             float dist = Vec2_distanceSquared(item->m_position, player->m_position);
